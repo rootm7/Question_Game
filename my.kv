@@ -1,0 +1,227 @@
+<correct_ans_layout>:
+
+    Button:
+        text: 'Next Question'
+        font_size: 40
+        size_hint: 0.9,0.8
+        pos_hint: {'x': 0.05, 'top': .9}
+        on_release:
+            app.root.current = 'Q2'
+
+<correct_ans2_layout>:
+
+    Button:
+        text: 'Next Question'
+        font_size: 40
+        size_hint: 0.9,0.8
+        pos_hint: {'x': 0.05, 'top': .9}
+        on_release:
+            app.root.current = 'Q3'
+
+<end_game_layout>:
+
+    Button:
+        text: 'Finish'
+        font_size: 40
+        size_hint: 0.9,0.8
+        pos_hint: {'x': 0.05, 'top': .9}
+        on_release:
+            app.root.current = 'end'
+
+<wrong_ans_layout>:
+
+    Label:
+        text: 'Please Try Again'
+        font_size: 40
+        size_hint: 0.9,0.8
+        pos_hint: {'x': 0.05, 'top': .9}
+
+
+WindowManager:
+    QuestionOne:
+    QuestionTwo:
+    QuestionThree:
+    EndScreen:
+
+<QuestionOne>:
+    name: 'Q1'
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'QuestionTemp.jpg'
+
+
+    FloatLayout:
+
+        Label:
+            text: 'What is the Atomic mass of copper?'
+            font_size: 40
+            size_hint: 0.5,0.3
+            pos_hint: {'x': 0.25, 'top': 0.95}
+
+        Button:
+            text: '63.546 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.59}
+            on_release:
+                root.correct_btn()
+
+        Button:
+            text: '51.276 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.444}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '60.276 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.3}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '62.546 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.155}
+            on_release:
+                root.wrong_btn()
+
+
+<QuestionTwo>:
+    name: 'Q2'
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'QuestionTemp.jpg'
+
+
+    FloatLayout:
+
+        Label:
+            text: 'What is the Atomic mass of silver?'
+            font_size: 40
+            size_hint: 0.5,0.3
+            pos_hint: {'x': 0.25, 'top': 0.95}
+
+        Button:
+            text: '107.8682 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.59}
+            on_release:
+                root.correct_btn()
+
+        Button:
+            text: '1078.682 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.444}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '10.78682 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.3}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '107.682 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.155}
+            on_release:
+                root.wrong_btn()
+
+
+<QuestionThree>:
+    name: 'Q3'
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'QuestionTemp.jpg'
+
+
+    FloatLayout:
+
+        Label:
+            text: 'What is the Atomic mass of Gold?'
+            font_size: 40
+            size_hint: 0.5,0.3
+            pos_hint: {'x': 0.25, 'top': 0.95}
+
+        Button:
+            text: '196.96657 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.59}
+            on_release:
+                root.correct_btn()
+
+        Button:
+            text: '196.9657 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.444}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '196.9696 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.3}
+            on_release:
+                root.wrong_btn()
+
+        Button:
+            text: '96.9696 u'
+            background_color: 0, 0, 0, 0
+            font_size: 25
+            size_hint: 0.3,0.10
+            pos_hint: {'x': 0.2, 'top': 0.155}
+            on_release:
+                root.wrong_btn()
+
+
+<EndScreen>:
+    name: 'end'
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'QuestionTemp.jpg'
+
+
+    FloatLayout:
+
+        Label:
+            text: 'Thanks for Playing'
+            font_size: 40
+            size_hint: 0.5,0.3
+            pos_hint: {'x': 0.25, 'top': 0.95}
